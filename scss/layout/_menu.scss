@@ -1,0 +1,120 @@
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header{
+   background-color: $white;
+   height: 3.125rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: $white;
+   padding: 0 1rem;
+   box-shadow: $shadow;
+   #hamburguer {
+       display: block;
+       outline: 0;
+       &:hover {
+           cursor: pointer;
+       }
+       @media(min-width: $tablet) {
+       display: none;
+      } 
+   }
+}
+
+// MENU PRINCIPAL
+.menu {
+   display: none;
+   @media(min-width: 768px) {
+      display: block;
+   } 
+    .menu__list {
+        display: flex;
+        list-style-type: none;
+    }
+    .menu__link {
+        padding: 1rem 0;
+        font-size: 0.9rem;
+        display: block;
+        color: #000;
+        padding-left: 2em;
+        text-decoration: none;
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+// MENU LATERAL
+.menu-lateral {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20;
+    left: -50rem;
+    padding-top: 2rem; 
+    transition: .1s;
+    box-shadow: $shadow; 
+    @media(min-width: $tablet) {
+        display: none;
+    }
+    &__list {
+        padding: 1em;
+        .menu-lateral__item {
+            list-style-type: none;
+            padding: 1em 0;
+            .menu-lateral--link {
+                text-decoration: none;
+                color: #000;
+                display: block;
+                
+            }
+            .menu-lateral--link::before {
+                width: 10px;   
+                transition: 2s; 
+                position: absolute;
+                left: 0;
+                z-index: -10;
+                
+            }
+            .menu-lateral--link:hover::before {
+                content: '';
+                height: 20px;
+                background-color: $orange;
+                translate: (200px);
+                animation-name: scale;
+            }
+        }
+    }
+}
+
+
+
+
+// MOSTRAR EL MENU CUANDO HAGAN CLICK EN EL ICONO DE HAMBURGUER
+.show {
+ left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

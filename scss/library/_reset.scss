@@ -1,0 +1,16 @@
+
+/* This code portion delete tha margin and padding
+for defaulf in the browser*/
+
+html {
+    font-size: 16px;
+    font-family: verdana;
+    box-sizing: border-box;
+
+    *,
+    ::after,
+    ::before {
+        padding: 0;
+        margin: 0;
+    }
+}

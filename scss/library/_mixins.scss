@@ -1,0 +1,6 @@
+
+
+// Lateral menu
+@mixin respond-to($width) {
+    max-width: $width;
+}
